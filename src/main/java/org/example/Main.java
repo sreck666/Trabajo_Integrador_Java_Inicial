@@ -6,7 +6,7 @@ import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.List;
 import com.opencsv.*;
-import java.util.Hashtable;
+import java.util.HashMap;
 
 import com.opencsv.bean.CsvToBeanBuilder;
 
@@ -24,7 +24,6 @@ public class Main {
 
 
 		List<Resultado> listaDeResultados = new ArrayList<>();
-		List<Pronostico> listaDeResultadosForm = new ArrayList<>();
 		List<Pronostico> listaDePronostico = new ArrayList<>();
 		
 
@@ -39,7 +38,7 @@ public class Main {
 					.build()
 					.parse();
 
-
+			
 
 		} catch (IOException ex) { 
 			System.err.println("Erorr al leer el archivo");
@@ -47,31 +46,7 @@ public class Main {
 
 
 
-
-
-		int i = 0;
-
-		for (Resultado resultado : listaDeResultados) {
-			resultado.myPublicMethod();
-		}
-
-
-
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-
-
 		//--------------------------------------------------------------------------------------------------------------------------        
-
-
 
 		try {
 			listaDePronostico = new CsvToBeanBuilder(new FileReader("D:\\develop\\Java\\TrabajoPractico\\src\\main\\resources\\pronostico.csv"))
@@ -82,27 +57,54 @@ public class Main {
 					.parse();
 
 
-
-
-
-			for (Pronostico pronostico: listaDePronostico){
-				pronostico.myPublicMethod_2();
-				pronostico.mymy();
-			}
-
-
-
-
 		} catch (IOException ex) {
 			System.err.println("Error al leer el archivo");
 			ex.printStackTrace();  }
+		
+		
 		//---------------------------------------------------------------------------------------------------
 
-
+		HashMap<String, Integer> hashMapPronostico = new HashMap<>();
+		
+		int i = 0;
+		int nVal = 0;
+		
+		
+		for (Pronostico pronostico: listaDePronostico){
+			
+		
+			if (hashMapPronostico.containsKey(pronostico.getplayer())) {
+	            //nVal = hashMapPronostico.get(pronostico.getplayer()) + 1;
+	            //hashMapPronostico.put(pronostico.getplayer(), nVal);
+				
+	        } else {
+	        	hashMapPronostico.put(pronostico.getplayer(), 0);
+	        	i = 0;
+	        }
+			
+			if (listaDeResultados.get(i).getGanador().equalsIgnoreCase(pronostico.getPronostico())) {
+	            nVal = hashMapPronostico.get(pronostico.getplayer());
+	            nVal = nVal + 1;
+	            hashMapPronostico.put(pronostico.getplayer(), nVal);
+			} else {
+				//System.out.println("no");
+			}
+			
+			i = i + 1;
+			
+			
+		}
+		
+				
+		for (HashMap.Entry<String, Integer> entry : hashMapPronostico.entrySet()) {
+            System.out.printf("Jugador: %s.  \t  Puntuacion: %d\n", entry.getKey(), entry.getValue());
+        }
 
 	
 
 	}
+	
+
 
 }
 

@@ -74,33 +74,22 @@ public class Pronostico {
 		this.Equipo2 = Equipo2;
 	}
 	
-	public void myPublicMethod_2() {
+	public String getPronostico() {
 		
 		String ganador = "empate";
+		
 		if (this.okEquipo1 == 'X' ) {
      		ganador = this.Equipo1; 
      	} else if (this.okEquipo2 == 'X' ) {
      		ganador = this.Equipo2;
      	} 
-		System.out.println(player +" dijo que ganaba: " + ganador);
+		
+		return ganador.trim();
 		
 		
 	}
 	
-	public void mymy() {
-		
-	      	Hashtable<String, Integer> playerPuntuacion = new Hashtable<String, Integer>();
-	      		
-	      	
-	        // De esta forma asocio a una persona con su edad en el diccionario
-	      	playerPuntuacion.put("Juan", 25);
-	      	playerPuntuacion.put("Roberto", 12);
-	      	playerPuntuacion.put("Laura", 29);
-	
-	        //System.out.println(playerPuntuacion.get("Juan"));
-		
-	}
-		
+
 	
 
 }

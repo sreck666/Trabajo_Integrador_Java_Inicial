@@ -4,6 +4,8 @@ package modelo;
 import com.opencsv.bean.CsvBindByPosition;
 import com.opencsv.bean.CsvDate;
 
+
+
 public class Resultado {
 	
     @CsvBindByPosition(position = 0)
@@ -20,6 +22,8 @@ public class Resultado {
     
     @CsvBindByPosition(position = 4)
     private String equipo2;
+    
+    
 
 	public String getEquipo1() {
 		return equipo1;
@@ -61,18 +65,19 @@ public class Resultado {
 		this.grupo = grupo;
 	}
     
-	public void myPublicMethod() {
+	
+	public String getGanador() {
+		
 		String ganador = "empate";
+		
 		if (this.golEquipo1 > this.golEquipo2) {
-     		ganador = equipo1; 
+     		ganador = this.equipo1; 
      	} else if (this.golEquipo1 < this.golEquipo2) {
-     		ganador = equipo2;
+     		ganador = this.equipo2;
      	} 
-		System.out.println(ganador);
+		//System.out.println(ganador);
 		
-		
-		
-		
+		return ganador.trim();
 		
 	  } 
     
