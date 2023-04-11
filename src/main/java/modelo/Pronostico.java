@@ -1,16 +1,17 @@
 package modelo;
-
+import java.util.Hashtable;
 
 import com.opencsv.bean.CsvBindByPosition;
 import com.opencsv.bean.CsvDate;
 
+
 public class Pronostico {
 	
 	@CsvBindByPosition(position = 0)
-    private String nom_player;
+    private String player;
     
     @CsvBindByPosition(position = 1)
-    private String proEquipo1;
+    private String Equipo1;
     
     @CsvBindByPosition(position = 2)
     private char okEquipo1;
@@ -22,23 +23,23 @@ public class Pronostico {
     private char okEquipo2;
     
     @CsvBindByPosition(position = 5)
-    private String proEquipo2;
+    private String Equipo2;
 
     
-	public String getNom_player() {
-		return nom_player;
+	public String getplayer() {
+		return player;
 	}
 
-	public void setNom_player(String nom_player) {
-		this.nom_player = nom_player;
+	public void setPlayer(String player) {
+		this.player = player;
 	}
 
-	public String getProEquipo1() {
-		return proEquipo1;
+	public String getEquipo1() {
+		return Equipo1;
 	}
 
-	public void setProEquipo1(String proEquipo1) {
-		this.proEquipo1 = proEquipo1;
+	public void setEquipo1(String Equipo1) {
+		this.Equipo1 = Equipo1;
 	}
 
 	public char getOkEquipo1() {
@@ -65,14 +66,42 @@ public class Pronostico {
 		this.okEquipo2 = okEquipo2;
 	}
 
-	public String getProEquipo2() {
-		return proEquipo2;
+	public String getEquipo2() {
+		return Equipo2;
 	}
 
-	public void setProEquipo2(String proEquipo2) {
-		this.proEquipo2 = proEquipo2;
+	public void setquipo2(String Equipo2) {
+		this.Equipo2 = Equipo2;
 	}
-
+	
+	public void myPublicMethod_2() {
+		
+		String ganador = "empate";
+		if (this.okEquipo1 == 'X' ) {
+     		ganador = this.Equipo1; 
+     	} else if (this.okEquipo2 == 'X' ) {
+     		ganador = this.Equipo2;
+     	} 
+		System.out.println(player +" dijo que ganaba: " + ganador);
+		
+		
+	}
+	
+	public void mymy() {
+		
+	      	Hashtable<String, Integer> playerPuntuacion = new Hashtable<String, Integer>();
+	      		
+	      	
+	        // De esta forma asocio a una persona con su edad en el diccionario
+	      	playerPuntuacion.put("Juan", 25);
+	      	playerPuntuacion.put("Roberto", 12);
+	      	playerPuntuacion.put("Laura", 29);
+	
+	        //System.out.println(playerPuntuacion.get("Juan"));
+		
+	}
+		
+	
 
 }
 

@@ -61,6 +61,19 @@ public class Resultado {
 		this.grupo = grupo;
 	}
     
-    
+	public void myPublicMethod() {
+		String ganador = "empate";
+		if (this.golEquipo1 > this.golEquipo2) {
+     		ganador = equipo1; 
+     	} else if (this.golEquipo1 < this.golEquipo2) {
+     		ganador = equipo2;
+     	} 
+		System.out.println(ganador);
+		
+		
+		
+		
+		
+	  } 
     
 }
