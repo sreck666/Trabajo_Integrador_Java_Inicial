@@ -16,12 +16,6 @@ import modelo.Resultado;
 
 public class Main {
 	public static void main(String[] args) {
-		//En la variable args va a viajar la ruta del archivo que queremos que abra el programa
-		//        if(args.length == 0){
-		//            System.out.println("ERROR: No se Ingreso el archivo del resultado de los partidos");
-		//            System.exit(88);
-		//        }
-
 
 		List<Resultado> listaDeResultados = new ArrayList<>();
 		List<Pronostico> listaDePronostico = new ArrayList<>();
@@ -37,9 +31,6 @@ public class Main {
 					.withType(Resultado.class)
 					.build()
 					.parse();
-
-			
-
 		} catch (IOException ex) { 
 			System.err.println("Erorr al leer el archivo");
 			ex.printStackTrace(); }
@@ -47,8 +38,9 @@ public class Main {
 
 
 		//--------------------------------------------------------------------------------------------------------------------------        
-
+		//----- Leemos el Archivo de los pronosticos.
 		try {
+			//listaDePronostico = new CsvToBeanBuilder(new FileReader(args[1]))
 			listaDePronostico = new CsvToBeanBuilder(new FileReader("D:\\develop\\Java\\TrabajoPractico\\src\\main\\resources\\pronostico.csv"))
 					.withSkipLines(1)
 					.withSeparator(';')
@@ -69,19 +61,13 @@ public class Main {
 		int i = 0;
 		int nVal = 0;
 		
-		
+		//----- recorremos pronostico y sumamos en el diccionario (hashmap) la  puntuacion de los participantes
 		for (Pronostico pronostico: listaDePronostico){
-			
-		
 			if (hashMapPronostico.containsKey(pronostico.getplayer())) {
-	            //nVal = hashMapPronostico.get(pronostico.getplayer()) + 1;
-	            //hashMapPronostico.put(pronostico.getplayer(), nVal);
-				
 	        } else {
 	        	hashMapPronostico.put(pronostico.getplayer(), 0);
 	        	i = 0;
 	        }
-			
 			if (listaDeResultados.get(i).getGanador().equalsIgnoreCase(pronostico.getPronostico())) {
 	            nVal = hashMapPronostico.get(pronostico.getplayer());
 	            nVal = nVal + 1;
@@ -91,22 +77,14 @@ public class Main {
 			}
 			
 			i = i + 1;
-			
-			
 		}
-		
-				
+		//----- Imprimimos los resultados
 		for (HashMap.Entry<String, Integer> entry : hashMapPronostico.entrySet()) {
             System.out.printf("Jugador: %s.  \t  Puntuacion: %d\n", entry.getKey(), entry.getValue());
         }
-
-	
-
 	}
-	
-
-
 }
+
 
 
 

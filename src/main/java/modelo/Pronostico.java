@@ -7,6 +7,9 @@ import com.opencsv.bean.CsvDate;
 
 public class Pronostico {
 	
+	public Pronostico() { }
+	
+	
 	@CsvBindByPosition(position = 0)
     private String player;
     

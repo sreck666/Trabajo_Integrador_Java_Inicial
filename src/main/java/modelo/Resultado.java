@@ -8,6 +8,10 @@ import com.opencsv.bean.CsvDate;
 
 public class Resultado {
 	
+	public Resultado() {}
+	
+	
+	
     @CsvBindByPosition(position = 0)
     private String grupo;
 	
