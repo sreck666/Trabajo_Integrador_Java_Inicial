@@ -1,13 +1,19 @@
 package modelo;
-import java.util.Hashtable;
-
 import com.opencsv.bean.CsvBindByPosition;
-import com.opencsv.bean.CsvDate;
 
 
 public class Pronostico {
 	
 	public Pronostico() { }
+	
+	public Pronostico(String player, String Equipo1, String okEquipo1, String empate, String okEquipo2, String Equipo2) {
+		this.player = player;
+		this.Equipo1 = Equipo1;
+		this.okEquipo1 = okEquipo1;
+		this.empate = empate;
+		this.okEquipo2 = okEquipo2;
+		this.Equipo2 = Equipo2;
+	}
 	
 	
 	@CsvBindByPosition(position = 0)
@@ -17,13 +23,13 @@ public class Pronostico {
     private String Equipo1;
     
     @CsvBindByPosition(position = 2)
-    private char okEquipo1;
+    private String okEquipo1;
     
     @CsvBindByPosition(position = 3)
-    private char empate;
+    private String empate;
     
     @CsvBindByPosition(position = 4)
-    private char okEquipo2;
+    private String okEquipo2;
     
     @CsvBindByPosition(position = 5)
     private String Equipo2;
@@ -45,27 +51,27 @@ public class Pronostico {
 		this.Equipo1 = Equipo1;
 	}
 
-	public char getOkEquipo1() {
+	public String getOkEquipo1() {
 		return okEquipo1;
 	}
 
-	public void setOkEquipo1(char okEquipo1) {
+	public void setOkEquipo1(String okEquipo1) {
 		this.okEquipo1 = okEquipo1;
 	}
 
-	public char getEmpate() {
+	public String getEmpate() {
 		return empate;
 	}
 
-	public void setEmpate(char empate) {
+	public void setEmpate(String empate) {
 		this.empate = empate;
 	}
 
-	public char getOkEquipo2() {
+	public String getOkEquipo2() {
 		return okEquipo2;
 	}
 
-	public void setOkEquipo2(char okEquipo2) {
+	public void setOkEquipo2(String okEquipo2) {
 		this.okEquipo2 = okEquipo2;
 	}
 
@@ -81,15 +87,13 @@ public class Pronostico {
 		
 		String ganador = "empate";
 		
-		if (this.okEquipo1 == 'X' ) {
+		if (this.okEquipo1.equals("X")) {
      		ganador = this.Equipo1; 
-     	} else if (this.okEquipo2 == 'X' ) {
+     	} else if (this.okEquipo2.equals("X")) {
      		ganador = this.Equipo2;
      	} 
 		
 		return ganador.trim();
-		
-		
 	}
 	
 
