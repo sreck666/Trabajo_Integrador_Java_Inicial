@@ -15,24 +15,27 @@
 
     <dependencies>
 		<dependency>
-		    <groupId>com.googlecode.json-simple</groupId>
-		    <artifactId>json-simple</artifactId>
-		    <version>1.1.1</version>
+			<groupId>com.fasterxml.jackson.core</groupId>
+			<artifactId>jackson-databind</artifactId>
+			<version>2.13.3</version>
 		</dependency>
         <dependency>
             <groupId>com.opencsv</groupId>
-            <artifactId>opencsv</artifactId>
+            <artifactId>
+				opencsv</artifactId>
             <version>5.5.2</version>
-        </dependency>
+		</dependency>
         <dependency>
 		    <groupId>junit</groupId>
-    		<artifactId>junit</artifactId>
+    		<artifactId>
+				junit</artifactId>
     		<version>4.12</version>
     		<scope>test</scope>
 		</dependency>
 		<!-- https://mvnrepository.com/artifact/mysql/mysql-connector-java -->
 		<dependency>
-		    <groupId>mysql</groupId>
+		    <groupId>
+				mysql</groupId>
 		    <artifactId>mysql-connector-java</artifactId>
 		    <version>8.0.28</version>
 		</dependency>
