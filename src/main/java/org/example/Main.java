@@ -1,26 +1,70 @@
 package org.example;
 
 import java.io.FileReader;
+import java.io.FileWriter;
 import java.io.IOException;
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.HashMap;
 
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.ObjectMapper;
+
+
 import com.opencsv.bean.CsvToBeanBuilder;
 
 import modelo.Pronostico;
 import modelo.Resultado;
+import modelo.Configuracion;
 
 
 public class Main {
-	public static void main(String[] args)  {
+	public static void main(String[] args) throws JsonProcessingException  {
+		
+		
+		
+		// -------- Leemos el Archivo de Configuracion para recuperar algunos datos.
+		
+		
+			//Grabamos la configuracion una vez para tener el archivo congruente con lo que vamos a leer
+		
+//				Configuracion configuracion = new Configuracion();
+//				ObjectMapper objectMapper = new ObjectMapper();
+//				
+//				configuracion.setDRVCadena("com.mysql.cj.jdbc.Driver");
+//				configuracion.setPartidosCSV("D:\\\\develop\\\\Java\\\\TrabajoPractico\\\\src\\\\main\\\\resources\\\\partidos.csv");
+//				configuracion.setPronosticoCSV("D:\\\\develop\\\\Java\\\\TrabajoPractico\\\\src\\\\main\\\\resources\\\\pronostico.csv");
+//				configuracion.setPronosticoSQL("jdbc:mysql://localhost:33306/tp\",\"root\",\"javadb");
+//				configuracion.setPuntosxAcierto(2);
+//				
+//				String json = objectMapper.writeValueAsString(configuracion);
+//				
+//				try {
+//				FileWriter fileWriter = new FileWriter("configuracion.json");
+//				fileWriter.write(json);
+//				fileWriter.close();
+//				
+//				} catch (IOException ex) {
+//					ex.printStackTrace(); }
+//				
+//				System.out.println(json);
+//			
+		
+		// ----- Ahora vamos a leerlo.
+		
+		
+		//ObjectMapper objectMapper = new ObjectMapper();
+		//Configuracion configuracion = objectMapper.readValue(json, Configuracion.class);
+		
+		
+		// --------------------------------------------------------------------------
 
+		// ----- Creamos las listas que vamos a utilizar con los archivos CSV
+		
 		List<Resultado> listaDeResultados = new ArrayList<>();
 		List<Pronostico> listaDePronostico = new ArrayList<>();
 		
-//
-
 		//----- Leemos el Archivo de los resultados de los partidos  
 		try {
 			//listaDeResultados = new CsvToBeanBuilder(new FileReader(args[0]))

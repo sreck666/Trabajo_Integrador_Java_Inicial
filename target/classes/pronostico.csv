@@ -1,0 +1,19 @@
+Nombre;Equipo1;Gana1;Empate;Gana2;Equipo2
+Mariana;Qatar;;;X;Ecuador
+Mariana;Senegal;;;X;Paises Bajos
+Mariana;Qatar;;;X;Senegal
+Mariana;Paises Bajos;;X;;Ecuador
+Mariana;Ecuador;;;X;Senegal
+Mariana;Paises Bajos;X;;;Qatar
+Pedro;Qatar;;X;;Ecuador
+Pedro;Senegal;;;X;Paises Bajos
+Pedro;Qatar;X;;;Senegal
+Pedro;Paises Bajos;;X;;Ecuador
+Pedro;Ecuador;;X;;Senegal
+Pedro;Paises Bajos;;X;;Qatar
+Enrique;Qatar;X;;;Ecuador
+Enrique;Senegal;;X;;Paises Bajos
+Enrique;Qatar;;;X;Senegal
+Enrique;Paises Bajos;X;;;Ecuador
+Enrique;Ecuador;;X;;Senegal
+Enrique;Paises Bajos;;X;;Qatar

@@ -1,0 +1,49 @@
+Grupos;Equipo 1;Goles 1;Goles 2;Equipo 2
+Grupo A;Qatar;0;2;Ecuador
+Grupo A;Senegal;0;2;Pa¡ses Bajos
+Grupo A;Qatar;1;3;Senegal
+Grupo A;Pa¡ses Bajos;1;1;Ecuador
+Grupo A;Ecuador;1;2;Senegal
+Grupo A;Pa¡ses Bajos;2;0;Qatar
+Grupo B;Inglaterra;6;2;Ir n
+Grupo B;EE.UU.;1;1;Gales
+Grupo B;Gales;0;2;Ir n
+Grupo B;Inglaterra;0;0;EE.UU.
+Grupo B;Ir n;0;1;EE.UU.
+Grupo B;Gales;0;3;Inglaterra
+Grupo C;Argentina;1;2;Arabia Saudita
+Grupo C;M‚xico;0;0;Polonia
+Grupo C;Polonia;2;0;Arabia Saudita
+Grupo C;Argentina;2;0;M‚xico
+Grupo C;Polonia;0;2;Argentina
+Grupo C;Arabia Saudita;1;2;M‚xico
+Grupo D;Dinamarca;0;0;T£nez
+Grupo D;Francia;4;1;Australia
+Grupo D;T£nez;0;1;Australia
+Grupo D;Francia;2;1;Dinamarca
+Grupo D;Australia;1;0;Dinamarca
+Grupo D;T£nez;1;0;Francia
+Grupo F;Alemania;1;2;Jap¢n
+Grupo F;Espa¤a;7;0;Costa Rica
+Grupo F;Jap¢n;0;1;Costa Rica
+Grupo F;Espa¤a;1;1;Alemania
+Grupo F;Costa Rica;2;4;Alemania
+Grupo F;Jap¢n;2;1;Espa¤a
+Grupo G;Marruecos;0;0;Croacia
+Grupo G;B‚lgica;1;0;Canad 
+Grupo G;B‚lgica;0;2;Marruecos
+Grupo G;Croacia;4;1;Canad 
+Grupo G;Canad ;1;2;Marruecos
+Grupo G;Croacia;0;0;B‚lgica
+Grupo H;Suiza;1;0;Camer£n
+Grupo H;Brasil;2;0;Serbia
+Grupo H;Camer£n;3;3;Serbia
+Grupo H;Brasil;1;0;Suiza
+Grupo H;Camer£n;1;0;Brasil
+Grupo H;Serbia;2;3;Suiza
+Grupo I;Uruguay;0;0;Corea del Sur
+Grupo I;Portugal;3;2;Ghana
+Grupo I;Corea del Sur;2;3;Ghana
+Grupo I;Portugal;2;0;Uruguay
+Grupo I;Ghana;0;2;Uruguay
+Grupo I;Corea del Sur;2;1;Portugal
