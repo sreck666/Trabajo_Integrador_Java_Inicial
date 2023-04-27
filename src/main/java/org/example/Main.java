@@ -2,6 +2,8 @@ package org.example;
 
 import java.io.FileReader;
 import java.io.FileWriter;
+import java.io.File;
+
 import java.io.IOException;
 import java.sql.*;
 import java.util.ArrayList;
@@ -10,8 +12,7 @@ import java.util.HashMap;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
-
-
+import com.fasterxml.jackson.databind.deser.impl.ObjectIdReader;
 import com.opencsv.bean.CsvToBeanBuilder;
 
 import modelo.Pronostico;
@@ -41,10 +42,11 @@ public class Main {
 //				String json = objectMapper.writeValueAsString(configuracion);
 //				
 //				try {
-//				FileWriter fileWriter = new FileWriter("configuracion.json");
-//				fileWriter.write(json);
-//				fileWriter.close();
-//				
+		
+	//				FileWriter fileWriter = new FileWriter("configuracion.json");
+	//				fileWriter.write(json);
+	//				fileWriter.close();
+	//				
 //				} catch (IOException ex) {
 //					ex.printStackTrace(); }
 //				
@@ -53,9 +55,29 @@ public class Main {
 		
 		// ----- Ahora vamos a leerlo.
 		
+
 		
-		//ObjectMapper objectMapper = new ObjectMapper();
-		//Configuracion configuracion = objectMapper.readValue(json, Configuracion.class);
+//		try {
+//			
+//			
+////			ObjectMapper objectMapper = new ObjectMapper();
+////			Configuracion configuracion = objectMapper.readValue(configFile, Configuracion.class);
+////			
+////				String cfgPronosticoCSV = configuracion.getPronosticoCSV();
+////				String cfgPronosticoSQL =configuracion.getPronosticoSQL();
+////				String cfgPartidosCSV =configuracion.getPartidosCSV();
+////				int cfgPuntosxAcierto =configuracion.getPuntosxAcierto();
+////				String cfgDRVCadena =configuracion.getDRVCadena();
+////			
+//			
+//		} catch (JsonProcessingException ex) { 
+//			System.err.println("No se Pudieron recuperar los datos.");
+//			ex.printStackTrace(); 
+//		} catch (IOException ex) { 
+//			System.err.println("Error en el Archivo.");
+//			ex.printStackTrace(); 
+//		}
+//		
 		
 		
 		// --------------------------------------------------------------------------
@@ -69,6 +91,7 @@ public class Main {
 		try {
 			//listaDeResultados = new CsvToBeanBuilder(new FileReader(args[0]))
 			listaDeResultados = new CsvToBeanBuilder<Resultado>(new FileReader("D:\\develop\\Java\\TrabajoPractico\\src\\main\\resources\\partidos.csv"))
+			//listaDeResultados = new CsvToBeanBuilder(new FileReader(cfgPartidosCSV );
 					.withSkipLines(1)
 					.withSeparator(';')
 					.withType(Resultado.class)

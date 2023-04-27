@@ -12,12 +12,12 @@ public class Configuracion {
 
 	public Configuracion() { }
 	
-	public Configuracion(String PronosticoCSV, String PronosticoSQL, String PartidosCSV, int PuntosxAcierto, String DRVCadena) {
-    this.PronosticoCSV = PronosticoCSV;
-    this.PartidosCSV = PartidosCSV;
-    this.DRVCadena = DRVCadena;
-    this.PuntosxAcierto = PuntosxAcierto;
-	}
+//	public Configuracion(String PronosticoCSV, String PronosticoSQL, String PartidosCSV, int PuntosxAcierto, String DRVCadena) {
+//	    this.PronosticoCSV = PronosticoCSV;
+//	    this.PartidosCSV = PartidosCSV;
+//	    this.DRVCadena = DRVCadena;
+//	    this.PuntosxAcierto = PuntosxAcierto;
+//	}
 
 	public String getPronosticoCSV() {
 		return PronosticoCSV;
