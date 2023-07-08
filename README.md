@@ -24,8 +24,6 @@ La entrega es de caracter individual.
 ----------------------------------------------------------------
 ----------------------------------------------------------------
 
-Me restaria... realizar las pruebas con JUNIT, que realmente se me complico.
-
 Y Ahora estoy  tratando de implementar JSON para leer las configuraciones de los puntajes asignados.
 
 
